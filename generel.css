@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Bowlby+One&family=Quicksand&display=swap");
+@font-face {
+  font-family: StandardGeorgia;
+  src: url("font/Georgia.ttf");
+}
+
+html {
+  --fontheaderbold: "Bowlby One", cursive;
+  --fontheadline: StandardGeorgia;
+  --fontcategories: "Quicksand", sans-serif;
+  --borderthickness: 2.5px solid;
+  --categoriescolor: black;
+  --sizexxl: clamp(2rem, 2.5vw + 1rem, 4rem);
+  --sizem: clamp(1.4rem, 1.5vw + 1rem, 1.4rem);
+}
+
+.border {
+  height: 50vh;
+  margin: 0 15% 0 15%;
+  border-left: var(--borderthickness);
+  border-right: var(--borderthickness);
+  border-bottom: var(--borderthickness);
+  border-color: black;
+}
+.framework {
+  border-bottom: var(--borderthickness);
+  border-color: black;
+  z-index: 2;
+}
+
+.frames {
+  height: 47vh;
+  margin: 0 15% 0 15%;
+  border-left: var(--borderthickness);
+  border-right: var(--borderthickness);
+  border-color: black;
+}
+
+.frame {
+  margin: 0 15% 0 15%;
+  border-left: var(--borderthickness);
+  border-right: var(--borderthickness);
+  border-color: black;
+}
+
+header,
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 40px;
+  border: 0;
+}
+
+.navbar ul {
+  list-style: none;
+}
+
+h1 {
+  padding-left: 10px;
+  font-family: var(--fontheadline);
+  font-size: var(--sizexxl);
+}
+
+h1 span {
+  font-family: var(--fontheaderbold);
+}
+nav li {
+  font-family: var(--fontcategories);
+  font-size: var(--sizem);
+  color: var(--categoriescolor);
+}
+nav a {
+  padding: 5px 20px 0px 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: yellow;
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--categoriescolor);
+}
+.categories {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: yellow;
+}
+.categories ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.categories li {
+  list-style: none;
+  padding: 1em 1em 1em 0em;
+  margin: 0;
+  font-family: var(--fontcategories);
+}
+.categories a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+}
+.container {
+  position: relative;
+}
+
+.soldout {
+  background-color: red;
+  color: white;
+  padding: 5px;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 50px;
+}
+.product img {
+  border: 1.7px solid;
+  border-color: black;
+}
+
+.product div {
+  padding-left: 50px;
+}
+h3 {
+  font-family: var(--fontheadline);
+  font-size: 25px;
+}
+
+.product p {
+  font-size: 20px;
+}
+
+@media (min-width: 800px) {
+  .navbar {
+    display: flex;
+    align-items: baseline;
+    gap: 2em;
+  }
+  .productlist {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+    margin: 0;
+    gap: 1.5em;
+  }
+}
