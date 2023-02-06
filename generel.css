@@ -11,7 +11,8 @@ html {
   --borderthickness: 2.5px solid;
   --categoriescolor: black;
   --sizexxl: clamp(2rem, 2.5vw + 1rem, 4rem);
-  --sizem: clamp(1.4rem, 1.5vw + 1rem, 1.4rem);
+  --sizel: clamp(2rem, 2vw + 1rem, 2rem);
+  --sizem: clamp(1.3rem, 1.3vw + 1rem, 1.3rem);
 }
 
 .border {
@@ -19,7 +20,6 @@ html {
   margin: 0 15% 0 15%;
   border-left: var(--borderthickness);
   border-right: var(--borderthickness);
-  border-bottom: var(--borderthickness);
   border-color: black;
 }
 .framework {
@@ -59,11 +59,12 @@ main {
 h1 {
   padding-left: 10px;
   font-family: var(--fontheadline);
-  font-size: var(--sizexxl);
+  font-size: var(--sizel);
 }
 
 h1 span {
   font-family: var(--fontheaderbold);
+  font-size: var(--sizexxl);
 }
 nav li {
   font-family: var(--fontcategories);
@@ -95,6 +96,7 @@ a:visited {
 .categories ul {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 }
@@ -110,10 +112,15 @@ a:visited {
 }
 
 img {
-  max-width: 100%;
+  max-width: 90%;
 }
 .container {
   position: relative;
+}
+
+h2 {
+  font-family: var(--fontheadline);
+  font-size: large;
 }
 
 .soldout {
@@ -121,14 +128,10 @@ img {
   color: white;
   padding: 5px;
   position: absolute;
-  top: 15px;
-  right: 10px;
+  top: 3%;
+  right: 13%;
 }
-.product {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-bottom: 50px;
-}
+
 .product img {
   border: 1.7px solid;
   border-color: black;
@@ -158,5 +161,10 @@ h3 {
     padding: 0;
     margin: 0;
     gap: 1.5em;
+  }
+  .product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 50px;
   }
 }
