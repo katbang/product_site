@@ -87,6 +87,23 @@ nav a:hover {
 a:visited {
   color: var(--categoriescolor);
 }
+.breadcrumb {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 16px;
+  list-style: none;
+  font-family: var(--fontcategories);
+}
+.breadcrumb li + li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+.breadcrumb li a:hover {
+  text-decoration: underline;
+}
 .categories {
   padding: 0;
   margin: 0;
@@ -106,9 +123,17 @@ a:visited {
   padding: 1em 1em 1em 0em;
   margin: 0;
   font-family: var(--fontcategories);
+  color: var(--categoriescolor);
+}
+
+.categories a {
+  text-decoration: none;
 }
 .categories a:hover {
   text-decoration: underline;
+}
+.categories a:visited {
+  color: var(--categoriescolor);
 }
 
 img {
@@ -124,14 +149,24 @@ h2 {
 }
 
 .soldout {
+  max-width: 25%;
   background-color: red;
   color: white;
+  font-size: 17px;
   padding: 5px;
   position: absolute;
   top: 3%;
   right: 13%;
+  z-index: 3;
 }
 
+.line-through {
+  text-decoration: line-through;
+}
+.discount,
+.percentage {
+  color: red;
+}
 .product img {
   border: 1.7px solid;
   border-color: black;

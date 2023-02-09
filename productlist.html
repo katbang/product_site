@@ -10,33 +10,47 @@
   <body>
     <div class="framework">
       <div class="frame">
-        <header class="navbar">
-          <h1><span>O</span>ur<span>H</span>our</h1>
-          <nav>
-            <ul>
-              <li><a href="category.html">Categories</a></li>
-            </ul>
-          </nav>
+        <header>
+          <div class="navbar">
+            <h1><span>O</span>ur<span>H</span>our</h1>
+            <nav>
+              <ul>
+                <li><a href="category.html">Categories</a></li>
+              </ul>
+            </nav>
+          </div>
+          <ul class="breadcrumb">
+            <li><a href="category.html">Categories</a></li>
+            <li><a class="breadcrumb-item" href="">Pens</a></li>
+          </ul>
         </header>
       </div>
     </div>
     <div class="frame">
       <main>
         <div class="productlist">
-          <div class="container">
-            <a href="product.html">
-              <img
-                src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp"
-                alt="Sahara Team India Fanwear Round Neck Jersey"
-            /></a>
-            <h2>
-              <a href="product.html"
-                >Sahara Team India Fanwear Round Neck Jersey</a
+          <template id="smallProductTemplate">
+            <article class="container">
+              <a class="link" href="product.html">
+                <img
+                  src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp"
+                  alt=""
+              /></a>
+
+              <a class="link" href="product.html"
+                ><h2>Sahara Team India Fanwear Round Neck Jersey</h2></a
               >
-            </h2>
-            <p class="brand">Nike</p>
-            <p>DKK 895,-</p>
-          </div>
+
+              <p class="brand">Nike</p>
+              <p>
+                <span class="price">DKK 895,- </span
+                ><span class="percentage"></span>
+              </p>
+              <p class="discount"></p>
+              <p class="status">Sold out</p>
+            </article></template
+          >
+          <!--
           <div class="container">
             <a href="product.html">
               <img
@@ -125,10 +139,10 @@
             <h2><a href="product.html">Grey Solid Round Neck T-Shirt</a></h2>
             <p class="brand">Puma</p>
             <p>DKK 799,-</p>
-          </div>
+          </div> -->
         </div>
       </main>
     </div>
-    <footer></footer>
+    <script src="js/productlist.js"></script>
   </body>
 </html>
