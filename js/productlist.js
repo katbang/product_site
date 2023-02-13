@@ -33,7 +33,6 @@ function showProduct(product) {
   } else {
     copy.querySelector(".status").remove();
   }
-  document.querySelector(".productlist").appendChild(copy);
 
   document.querySelector(".productlist").appendChild(copy);
 }

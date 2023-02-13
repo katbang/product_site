@@ -20,4 +20,16 @@ function showProduct(product) {
     ".breadcrumb-item"
   ).href = `productlist.html?category=${product.category}`;
   document.querySelector(".breadcrumb-item2").textContent = product.variantname;
+  if (product.discount) {
+    document.querySelector(".notavailable").textContent = `Sold out`;
+  }
+  if (product.discount) {
+    document.querySelector(".price").classList.add("line-through");
+    document.querySelector(
+      ".percentage"
+    ).textContent = `  (-${product.discount}%)`;
+    document.querySelector(".discount").textContent = `Nu DKK ${Math.round(
+      (1 - product.discount / 100) * product.price
+    )},-`;
+  }
 }
